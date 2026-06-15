@@ -29,13 +29,6 @@ Meeting Agenda templates (located in the `/docs` directory in this repo):
 
 ## Our Team
 
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team *before* you start
-coding!
-
-- Teammate name Terence Scrum Master: [GitHub](https://github.com/lwhterence) / [LinkedIn](https://www.linkedin.com/in/terence-lui-7ab78a4/)
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
-
-   ...
-- Teammate name # Churchill (Developer) : [GitHub](https://github.com/TheDevMode) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Terence (Scrum Master): [GitHub](https://github.com/lwhterence) / [LinkedIn](https://www.linkedin.com/in/terence-lui-7ab78a4/)
+- Anas (Web developer): [GitHub](https://github.com/martiNik2)
+- Churchill (Web developer) : [GitHub](https://github.com/TheDevMode)
