@@ -38,4 +38,4 @@ coding!
 - Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
 
    ...
-- Teammate name # Churchill : [GitHub](https://github.com/TheDevMode) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Teammate name # Churchill (Developer) : [GitHub](https://github.com/TheDevMode) / [LinkedIn](https://linkedin.com/in/liaccountname)
