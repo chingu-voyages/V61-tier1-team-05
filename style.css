@@ -36,3 +36,19 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.grid-square{
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    background-color: #ffeef7;
+    border: #3d2333 solid;
+    border-width: 2px;
+    text-align: center;
+}
+
+.grid-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
