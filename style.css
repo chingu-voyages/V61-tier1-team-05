@@ -25,8 +25,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ef9bcf;
+    background-color: #f0b74f;
     color: black;
+    font-size: 1.1rem;
     padding: 30px;
     border-radius: 8px;
     text-align: center;
@@ -36,12 +37,13 @@ body{
 }
 
 .start-button{
-    background-color: blue;
+    background-color: #e0c99e;
     margin-top: 20px;
     padding: 10px 20px;
-    border: none;
-    color: white;
+    border-width: 2px;
+    border-color: black;
     border-radius: 10px;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
@@ -56,14 +58,14 @@ body{
     min-width: 40px;
     font-size: 1.5rem;
     margin: 3px;
-    background-color: #ffeef7;
+    background-color: #e6e8e1;
     border: #3d2333 solid;
     border-width: 2px;
     font-size: 2rem;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-weight:bolder;
-    color: darkslateblue;
+    color: rgb(18, 18, 18);
     position: relative;
 }
 
