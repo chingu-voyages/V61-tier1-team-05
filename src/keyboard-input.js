@@ -49,6 +49,7 @@ function checkWord(){
     if (word_list.includes(word.toLowerCase())){
         currentCol=0;
         currentRow++;
+        updateArrow();
     }
     else{
         errorMessage("Word does not exist!");
