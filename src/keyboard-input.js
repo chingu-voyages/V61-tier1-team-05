@@ -1,7 +1,7 @@
 let currentRow = 0;
 let currentCol = 0;
 let word_list=[];
-
+let hidden_word="";
 
 
 
@@ -33,11 +33,6 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
-loadWords();
-
-updateArrow();
-
-
 function checkWord(){
     rowDiv=document.querySelector(`#row_${currentRow}`);
     if (rowDiv==null)
@@ -64,6 +59,8 @@ async function loadWords(){
         } 
 
         word_list=await response.json();
+        const index=Math.floor(word_list.length*Math.random());
+        hidden_word=word_list[index];
     }
     catch{
         errorMessage("error");
@@ -108,3 +105,7 @@ function errorMessage(message){
         },500);
     },2000);
 }
+
+loadWords();
+
+updateArrow();
