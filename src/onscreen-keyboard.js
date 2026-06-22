@@ -41,6 +41,10 @@ for (let i=0;i<zrow.length;i++){
     Button.classList.add("key");
     Button.id=`key_${zrow[i]}`;
     Button.textContent=zrow[i];
+    if (zrow[i]=="Enter"){
+        Button.style.backgroundColor="#A9E38A";
+        Button.style.borderWidth="1px";
+    }
     zrowDiv.appendChild(Button);
 }
 keyboardDiv.appendChild(zrowDiv);
