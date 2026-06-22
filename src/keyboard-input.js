@@ -21,7 +21,8 @@ function updateArrow(row) {
 }
 
 window.addEventListener("keydown", (event) => {
-
+    if (currentRow>=6)
+        return;
     switch (event.key) {
         case "Backspace":
             if (currentCol > 0) {
@@ -43,7 +44,6 @@ window.addEventListener("keydown", (event) => {
                 square.innerText = event.key.toUpperCase();
                 currentCol++;
             }
-            console.log(event.key);
     }
 });
 updateArrow(currentRow);
