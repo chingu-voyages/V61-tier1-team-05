@@ -35,7 +35,22 @@ body{
     opacity: 1;
     transition: opacity 0.5s ease;
 }
+.error-message{
+    position: absolute;
+    left: 300px;
+    max-width: fit-content;
+    height: 50px;
+    padding: 2px;
+}
+.error-message.overlay-content{
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+.error-message.overlay-content.hidden{
+    opacity: 0;
+}
 .start-button{
     background-color: #e0c99e;
     margin-top: 20px;

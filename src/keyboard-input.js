@@ -89,24 +89,22 @@ function updateArrow() {
     rowDiv.appendChild(arrowImg);
 }
 function errorMessage(message){
-    const backgroundDiv=document.createElement("div");
-    backgroundDiv.classList.add("overlay-background");
-    backgroundDiv.style.backgroundColor="rgba(0,0,0,0.4)";
-
     const contentDiv=document.createElement("div");
-    contentDiv.classList.add("overlay-content");
+    contentDiv.classList.add("error-message","overlay-content","hidden");
     contentDiv.innerText=message;
 
-    backgroundDiv.appendChild(contentDiv);
-    document.body.appendChild(backgroundDiv);
-
+    const rowDiv=document.querySelector(`#row_${currentRow}`);
+    rowDiv.appendChild(contentDiv);
 
     setTimeout(()=>{
-        backgroundDiv.classList.add("hidden");
+        contentDiv.classList.remove("hidden");
+    },10);
+
+    setTimeout(()=>{
         contentDiv.classList.add("hidden");
 
         setTimeout(()=>{
-            backgroundDiv.remove();
+            contentDiv.remove();
         },500);
     },2000);
 }
