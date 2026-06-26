@@ -182,3 +182,22 @@ footer span{
     border-color: gray;
     color: white;        
 }
+
+.color-box {
+    display: inline-block; 
+    width: 20px;         
+    height: 20px;         
+    border-radius: 4px;  
+}
+
+.gray {
+    background-color: gray;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
