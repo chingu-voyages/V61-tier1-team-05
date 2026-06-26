@@ -1,7 +1,8 @@
+import { evaluateWord } from "./colors-letter.js";
+import word_list from "./words.json" with {type:'json'};
 let currentRow = 0;
 let currentCol = 0;
-let word_list=[];
-
+let hidden_word="";
 
 
 
@@ -33,20 +34,22 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
-loadWords();
-
-updateArrow();
-
-
 function checkWord(){
-    rowDiv=document.querySelector(`#row_${currentRow}`);
+    let rowDiv=document.querySelector(`#row_${currentRow}`);
     if (rowDiv==null)
         return;
     let word="";
-    for (let i=0;i<rowDiv.children.length;i++){
+    for (let i=0;i<5;i++){
         word+=rowDiv.children[i].innerText;
     }
     if (word_list.includes(word.toLowerCase())){
+        let squareColors=evaluateWord(word,hidden_word);
+        for (let i = 0; i < 5; i++) {
+            rowDiv.children[i].classList.add(`${squareColors[i]}-box`);
+            let keyboard_letter=document.querySelector(`#key_${word[i]}`);
+            keyboard_letter.classList.add(`${squareColors[i]}-box`);
+        }
+        
         currentCol=0;
         currentRow++;
         updateArrow();
@@ -58,15 +61,11 @@ function checkWord(){
 
 async function loadWords(){
     try{
-        const response=await fetch("./src/words.json");
-        if (!response.ok){
-            throw new Error(`error ${response.status}`);
-        } 
-
-        word_list=await response.json();
+        const index=Math.floor(word_list.length*Math.random());
+        hidden_word=word_list[index];
     }
-    catch{
-        errorMessage("error");
+    catch(error){
+        errorMessage(error);
     }
 }
 
@@ -108,3 +107,7 @@ function errorMessage(message){
         },500);
     },2000);
 }
+
+loadWords();
+
+updateArrow();
