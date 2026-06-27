@@ -1,4 +1,5 @@
 import { evaluateWord } from "./colors-letter.js";
+import { buildGrid } from "./grid.js";
 import word_list from "./words.json" with {type:'json'};
 let currentRow = 0;
 let currentCol = 0;
@@ -107,7 +108,7 @@ function errorMessage(message){
         },500);
     },2000);
 }
-
+buildGrid();
 loadWords();
 
 updateArrow();
