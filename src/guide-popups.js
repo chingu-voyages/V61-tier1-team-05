@@ -20,20 +20,16 @@ function handleSquare(event){
     const textDiv=document.createElement("p");
     textDiv.id="cloud-text";
 
-    const color=square.classList[1];
-    let answerString="";
 
-    switch(color){
-        case "gray-box":
-            answerString=" was not in the word";
-            break;
-        case "yellow-box":
-            answerString=" was in the word but in the wrong position";
-            break;
-        case "green-box":
-            answerString=" was in the word and the right position";
-            break;
-        default: "error";
+    let answerString = "";
+    if (square.classList.contains("gray-box")) {
+        answerString = " was not in the word";
+    } else if (square.classList.contains("yellow-box")) {
+        answerString = " was in the word but in the wrong position";
+    } else if (square.classList.contains("green-box")) {
+        answerString = " was in the word and the right position";
+    } else {
+        return; 
     }
 
     textDiv.innerText=`${square.innerText}${answerString}`;
@@ -58,5 +54,5 @@ function handleSquare(event){
         setTimeout(()=>{
             parentDiv.remove();
         },300);
-    },3000);
+    },3000)
 }

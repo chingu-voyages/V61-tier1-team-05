@@ -65,7 +65,8 @@ function checkWord(){
 async function loadWords(){
     try{
         const index=Math.floor(word_list.length*Math.random());
-        hidden_word=word_list[index];
+        // hidden_word=word_list[index];
+        hidden_word="agree";
     }
     catch(error){
         errorMessage(error);
