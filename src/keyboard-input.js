@@ -1,4 +1,6 @@
 import { evaluateWord } from "./colors-letter.js";
+import { buildGrid } from "./grid.js";
+import { generateEvents } from "./guide-popups.js";
 import word_list from "./words.json" with {type:'json'};
 let currentRow = 0;
 let currentCol = 0;
@@ -53,6 +55,7 @@ function checkWord(){
         currentCol=0;
         currentRow++;
         updateArrow();
+        generateEvents(rowDiv);
     }
     else{
         errorMessage("Word does not exist!");
@@ -107,6 +110,8 @@ function errorMessage(message){
         },500);
     },2000);
 }
+
+buildGrid();
 
 loadWords();
 
