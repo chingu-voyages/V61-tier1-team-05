@@ -19,7 +19,7 @@ if (skipWelcome !== 'true') {
 
     const startButton = document.createElement("button");
     startButton.textContent = "Start!";
-    startButton.classList.add("start-button");
+    startButton.classList.add("overlay-button");
 
     welcomeDiv.appendChild(startButton);
     backgroundDiv.appendChild(welcomeDiv);
