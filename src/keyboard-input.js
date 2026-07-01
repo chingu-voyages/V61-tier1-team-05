@@ -6,7 +6,7 @@ import word_list from "./words.json" with {type:'json'};
 
 let currentRow = 0;
 let currentCol = 0;
-let hidden_word="";
+export let hidden_word="";
 
 
 
