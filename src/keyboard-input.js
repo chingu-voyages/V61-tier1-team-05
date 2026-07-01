@@ -1,7 +1,9 @@
 import { evaluateWord } from "./colors-letter.js";
+import { finish_message } from "./finish.js";
 import { buildGrid } from "./grid.js";
 import { generateEvents } from "./guide-popups.js";
 import word_list from "./words.json" with {type:'json'};
+
 let currentRow = 0;
 let currentCol = 0;
 let hidden_word="";
@@ -46,16 +48,27 @@ function checkWord(){
     }
     if (word_list.includes(word.toLowerCase())){
         let squareColors=evaluateWord(word,hidden_word);
+        
         for (let i = 0; i < 5; i++) {
             rowDiv.children[i].classList.add(`${squareColors[i]}-box`);
             let keyboard_letter=document.querySelector(`#key_${word[i]}`);
             keyboard_letter.classList.add(`${squareColors[i]}-box`);
         }
-        
-        currentCol=0;
-        currentRow++;
-        updateArrow();
-        generateEvents(rowDiv);
+        if (word.toLowerCase()==hidden_word){
+            finish_message("success");
+        }
+        else {
+            currentCol = 0;
+            currentRow++;
+
+            if (currentRow == 6) {
+                finish_message("failure");
+            }
+            else {
+                updateArrow();
+                generateEvents(rowDiv);
+            }
+        }
     }
     else{
         errorMessage("Word does not exist!");
@@ -66,6 +79,7 @@ async function loadWords(){
     try{
         const index=Math.floor(word_list.length*Math.random());
         hidden_word=word_list[index];
+        console.log(hidden_word);
     }
     catch(error){
         errorMessage(error);
