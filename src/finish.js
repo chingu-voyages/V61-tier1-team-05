@@ -8,12 +8,16 @@ export function finish_message(message){
     const contentDiv=document.createElement("div");
     contentDiv.classList.add("overlay-content");
 
-    const successP=document.createElement("p");
-    if (message=="failure")
-        successP.textContent="You lost! better luck next time";
-    else
-        successP.textContent="Congratulations! you have guessed the word right!";
-
+    const finishP=document.createElement("p");
+    const finishH=document.createElement("h3");
+    if (message=="failure"){
+        finishH.textContent="You were close!";
+        finishP.textContent="you'll get it next time!";
+    }
+    else{
+        finishH.textContent="Congratulations! 👏"
+        finishP.textContent="you have guessed the word right!";
+    }
     const againButton=document.createElement("button");
     againButton.textContent="Play again";
     againButton.classList.add("overlay-button");
@@ -21,7 +25,8 @@ export function finish_message(message){
         window.location.href=url.toString();
     })
 
-    contentDiv.appendChild(successP);
+    contentDiv.appendChild(finishH);
+    contentDiv.appendChild(finishP);
     contentDiv.appendChild(againButton);
     parentDiv.appendChild(contentDiv);
     document.body.appendChild(parentDiv);
