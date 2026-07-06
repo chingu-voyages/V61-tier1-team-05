@@ -1,8 +1,12 @@
-body{
+html, body{
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
+
 
 header{
     position: relative;
@@ -10,7 +14,7 @@ header{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 10px 0 10px 0;
+    padding: 6px 0 6px 0;
 }
 
 *{
@@ -144,9 +148,9 @@ footer{
     flex-grow: 1;
     margin: 2px;
     height: 8vh;
-    width: 100%;
     min-height: 30px;
     max-height: 50px;
+    min-width: 14px;
     width:auto;
     border: 1px solid black;
     font-size: 1.5rem;
@@ -163,23 +167,27 @@ footer{
         max-width: 90vw;
     }
 
-    .grid-row{
-        width: 80vw;
-    }
-
     .grid-square{
-        width: 20vw;
-        max-width: 60px;
+        width: 18vw;
+        max-width: 54px;
+        aspect-ratio: 1/1;
         height: auto;
-        font-size: 2.5rem;
+        font-size: 2.0rem;
     }
 
     #keyboard{
-        margin-top: 11vh;
+        margin-top: 20vh;
     }
 
     .keyboard-row{
         width: 95vw;
+    }
+    .key{
+        max-height: 40px;
+        height: 6vh;
+        font-size: 1.2rem;
+        padding: 3px;
+        min-width: 28px;
     }
 }
 
@@ -225,8 +233,8 @@ footer span{
 
 .page-switch{
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     padding: 5px;
     border: 3px solid orange;
     background-color: orange;
