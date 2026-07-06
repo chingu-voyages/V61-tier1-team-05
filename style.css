@@ -267,3 +267,8 @@ footer span{
     font-weight: 800;
     font-size: 1.5rem;
 }
+
+.nav-logo{
+    width: 35px;
+    height: 40px;
+}
