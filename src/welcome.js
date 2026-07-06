@@ -10,7 +10,7 @@ if (skipWelcome !== 'true') {
     welcomeDiv.classList.add("overlay-content");
 
     const welcomeH2 = document.createElement("h2");
-    welcomeH2.innerText = "Welcome to our Wordle!";
+    welcomeH2.innerText = "Welcome to Wordle!";
     welcomeDiv.appendChild(welcomeH2);
 
     const welcomeP = document.createElement("p");
