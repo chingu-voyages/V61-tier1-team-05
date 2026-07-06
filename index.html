@@ -13,9 +13,14 @@
 <body>
     <header>
         <a class="page-switch" href="guide.html">How to play</a>
-        <span>hint: click a colored box for its meaning</span>
-        <h1 id="wordle-h1"> <img src="wordle_final.png" alt="Wordle Logo" class="nav-logo">ordle!</h1>
-        <p id="header-p">Guess the 5 letter secret word in 6 tries or less!</p>
+        <h1 id="wordle-h1">
+            <img src="wordle_final.png" alt="Wordle Logo" class="nav-logo">ordle!
+        </h1>
+        
+        <div class="header-hint">
+            <p id="hint-letter">Guess the 5 letter secret word in 6 tries or less!</p>
+            <p id="hint-box">hint: click a colored box for its meaning</p>
+        </div>
     </header>
     <script type="module" src="src/colors-letter.js"></script>
     <script type="module" src="src/welcome.js"></script>
