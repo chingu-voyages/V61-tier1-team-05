@@ -1,6 +1,5 @@
 const keyboardDiv=document.createElement("div");
 keyboardDiv.id="keyboard";
-keyboardDiv.style.marginTop="20px";
 
 const qrowDiv=document.createElement("div");
 qrowDiv.id="qrow";
