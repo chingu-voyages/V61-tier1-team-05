@@ -115,10 +115,14 @@ footer{
     bottom: 10px;
 }
 
+#keyboard{
+    margin-top: 30px;
+}
+
 .keyboard-row{
     display: flex;
     justify-content: center;
-    width: 40vw;
+    width: 60vw;
     max-width: 500px;
     margin: 0 auto;
 }
