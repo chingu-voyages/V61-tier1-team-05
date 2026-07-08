@@ -48,7 +48,7 @@ for (let i=0;i<zrow.length;i++){
 }
 keyboardDiv.appendChild(zrowDiv);
 
-document.body.appendChild(keyboardDiv);
+document.querySelector("#main").appendChild(keyboardDiv);
 
 
 

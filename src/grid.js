@@ -9,6 +9,6 @@ export function buildGrid() {
             squareDiv.className = "grid-square";
             rowDiv.appendChild(squareDiv);
         }
-        document.body.appendChild(rowDiv);
+        document.querySelector("#main").appendChild(rowDiv);
     }
 }
