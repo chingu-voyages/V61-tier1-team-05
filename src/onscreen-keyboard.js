@@ -1,6 +1,5 @@
 const keyboardDiv=document.createElement("div");
 keyboardDiv.id="keyboard";
-keyboardDiv.style.marginTop="20px";
 
 const qrowDiv=document.createElement("div");
 qrowDiv.id="qrow";
@@ -49,7 +48,7 @@ for (let i=0;i<zrow.length;i++){
 }
 keyboardDiv.appendChild(zrowDiv);
 
-document.body.appendChild(keyboardDiv);
+document.querySelector("#main").appendChild(keyboardDiv);
 
 
 
