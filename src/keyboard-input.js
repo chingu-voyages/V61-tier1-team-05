@@ -1,4 +1,5 @@
 import { evaluateWord } from "./colors-letter.js";
+import { dark_mode } from "./dark-mode.js";
 import { finish_message } from "./finish.js";
 import { buildGrid } from "./grid.js";
 import { generateEvents } from "./guide-popups.js";
@@ -22,6 +23,7 @@ window.addEventListener("keydown", (event) => {
             }
             break;
         case "Enter":
+            event.preventDefault();
             if (currentCol == 5) {
                 checkWord();
             }
@@ -124,6 +126,8 @@ function errorMessage(message){
         },500);
     },2000);
 }
+
+dark_mode();
 
 buildGrid();
 
