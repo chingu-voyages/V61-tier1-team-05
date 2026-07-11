@@ -341,11 +341,11 @@ footer span{
     }
 
     .grid-square{
-        width: 18vw;
-        max-width: 55px;
         aspect-ratio: 1/1;
         height: auto;
         font-size: 2.2rem;
+        width: 8.0dvh;
+        max-width: 46px;
     }
 
     .grid-row{
@@ -355,7 +355,7 @@ footer span{
 
 
     #keyboard{
-        margin-top: 10vh;
+        margin-top: 8vh;
         margin-bottom: 40px;
     }
 
