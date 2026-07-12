@@ -57,14 +57,14 @@ function checkWord(){
             keyboard_letter.classList.add(`${squareColors[i]}-box`);
         }
         if (word.toLowerCase()==hidden_word){
-            finish_message("success");
+            finish_message("success", currentRow+1);
         }
         else {
             currentCol = 0;
             currentRow++;
 
             if (currentRow == 6) {
-                finish_message("failure");
+                finish_message("failure", currentRow+1);
             }
             else {
                 updateArrow();
