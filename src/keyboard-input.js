@@ -81,7 +81,6 @@ async function loadWords(){
     try{
         const index=Math.floor(word_list.length*Math.random());
         hidden_word=word_list[index];
-        console.log(hidden_word);
     }
     catch(error){
         errorMessage(error);
