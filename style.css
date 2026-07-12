@@ -384,6 +384,22 @@ footer span{
         bottom: 2px;
     }
 }
+@media (max-width:360px){
+    .key{
+        font-size: 1.1rem;
+        height: 4vh;
+        max-height: 45px;
+        padding: 2px;
+        min-width: 20px;
+    }
+    header{
+        font-size: 0.85rem;
+    }
+    .page-switch{
+        top: 4px;
+        left: 4px;
+    }
+}
 #dark-mode-button{
     position: absolute;
     top: 20px;
