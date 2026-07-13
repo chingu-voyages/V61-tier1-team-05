@@ -40,6 +40,19 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
+function updateKeyboard(letter,color){
+    let keyboard_letter = document.querySelector(`#key_${letter}`);
+    if (!keyboard_letter)
+        return;
+    if (keyboard_letter.classList.contains('green-box'))
+        return;
+    if (keyboard_letter.classList.contains('yellow-box') && color!='green')
+        return;
+    
+    keyboard_letter.classList.remove('green-box','yellow-box','gray-box');
+    keyboard_letter.classList.add(`${color}-box`);
+}
+
 function checkWord(){
     let rowDiv=document.querySelector(`#row_${currentRow}`);
     if (rowDiv==null)
@@ -53,18 +66,17 @@ function checkWord(){
         
         for (let i = 0; i < 5; i++) {
             rowDiv.children[i].classList.add(`${squareColors[i]}-box`);
-            let keyboard_letter=document.querySelector(`#key_${word[i]}`);
-            keyboard_letter.classList.add(`${squareColors[i]}-box`);
+            updateKeyboard(word[i],squareColors[i]);
         }
         if (word.toLowerCase()==hidden_word){
-            finish_message("success");
+            finish_message("success", currentRow+1);
         }
         else {
             currentCol = 0;
             currentRow++;
 
             if (currentRow == 6) {
-                finish_message("failure");
+                finish_message("failure", currentRow+1);
             }
             else {
                 updateArrow();
@@ -81,6 +93,7 @@ async function loadWords(){
     try{
         const index=Math.floor(word_list.length*Math.random());
         hidden_word=word_list[index];
+        console.log(hidden_word);
     }
     catch(error){
         errorMessage(error);
