@@ -1,31 +1,44 @@
-# voyage-tasks
+# Wordle
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+## Overview
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+We created this web application as our project for the 61st voyage over at chingu,
+it simulates the well known game knows as 'Wordle', and players will have fun trying our version of it!
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+[Live Version](https://chingu-voyages.github.io/V61-tier1-team-05/)
 
-> Own it & Make it your Own!
+## Features
 
-## Team Documents
+- Players can play the game on computer or on phone
+- Players can use their physical keyboard or the on-screen keyboard
+- Players who aren't familiar with the game can press the letters to know about the colors
+- Dark mode for players who aren't comfortable with light mode
+- Finish message tells the player how well they have performed
 
-You may find these helpful as you work together to organize your project.
+## Running locally
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+1 - Clone the repository
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+```
+git clone git@github.com:chingu-voyages/V61-tier1-team-05.git
+```
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+2 - Go into the main directory
+
+```
+cd V61-tier1-team-05
+```
+
+3 - Start a static file server, we'll use python for simplicity
+
+```
+python3 -m http.server
+```
+
+4 - Now go to the url that is stated after you open the server, usually `http://localhost:8000/index.html`
+
+5 - Enjoy the game!
+
 
 ## Our Team
 
