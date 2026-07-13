@@ -28,7 +28,7 @@ export function finish_message(message, attemptsCount) {
     } 
     else {
         if (attemptsCount <= 4) {
-            finishH.textContent = "Excellent! 🌟";
+            finishH.textContent = "Excellent! ★★★";
         } else if (attemptsCount <= 6) {
             finishH.textContent = "Good job! 👍";
         } else {
