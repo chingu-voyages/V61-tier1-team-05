@@ -1,4 +1,5 @@
 import { evaluateWord } from "./colors-letter.js";
+import { daily_mode } from "./daily-mode.js";
 import { dark_mode } from "./dark-mode.js";
 import { finish_message } from "./finish.js";
 import { buildGrid } from "./grid.js";
@@ -140,6 +141,8 @@ function errorMessage(message){
 }
 
 dark_mode();
+
+daily_mode();
 
 buildGrid();
 
