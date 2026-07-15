@@ -457,3 +457,9 @@ footer span{
     display: flex;
     flex-direction: column;
 }
+#daily-mode-button{
+    padding: 4px 0px;
+    color: white;
+    border-radius: 3px;
+    background-color: darkred;
+}
