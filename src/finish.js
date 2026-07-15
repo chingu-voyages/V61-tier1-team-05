@@ -12,7 +12,8 @@ export function finish_message(message, attemptsCount) {
     contentDiv.classList.add("overlay-content");
 
     const finishP = document.createElement("p");
-    const finishH = document.createElement("h3");
+    const finishDiv = document.createElement("div");
+    const finishDivmessage=document.createElement("div");
     const answerSpan = document.createElement("span");
     const wordP = document.createElement("p");
     wordP.textContent = `The word was `;
@@ -21,18 +22,30 @@ export function finish_message(message, attemptsCount) {
     answerSpan.textContent = hidden_word.toUpperCase();
     answerSpan.style.color = "green";
 
+    finishDiv.id="finish-div";
+    finishDivmessage.id="finish-div-message";
    
     if (message === "failure") {
-        finishH.textContent = "You were close!";
+        finishDivmessage.textContent="You were close!"; 
         finishP.textContent = "You'll get it next time!";
     } 
     else {
         if (attemptsCount <= 4) {
-            finishH.textContent = "Excellent! ★★★";
+            finishDivmessage.textContent = "Excellent!";
+            finishDiv.appendChild(finishDivmessage);
+            for (let i=0;i<3;i++){
+                const starImg = document.createElement("img");
+                starImg.src = "./star.png";
+                starImg.classList.add("star-image");
+                finishDiv.appendChild(starImg);
+            }
+
         } else if (attemptsCount <= 6) {
-            finishH.textContent = "Good job! 👍";
+            finishDivmessage.textContent = "Good job! 👍";
+            finishDiv.appendChild(finishDivmessage);
         } else {
-            finishH.textContent = "Phew! That was close 😮‍💨";
+            finishDivmessage.textContent = "Phew! That was close 😮‍💨";
+            finishDiv.appendChild(finishDivmessage);
         } 
         
         finishP.textContent = `You guessed the word right in ${attemptsCount} attempts!`;
@@ -47,7 +60,7 @@ export function finish_message(message, attemptsCount) {
 
     wordP.appendChild(answerSpan);
 
-    contentDiv.appendChild(finishH);
+    contentDiv.appendChild(finishDiv);
     contentDiv.appendChild(wordP);
     contentDiv.appendChild(finishP);
     contentDiv.appendChild(againButton);

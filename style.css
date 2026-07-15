@@ -431,3 +431,17 @@ footer span{
     border-radius: 3px;
     border: 2px solid #666;
 }
+#finish-div{
+    margin-top: 10px;
+    display: flex;
+}
+#finish-div-message{
+    font-weight: 700;
+    font-size: larger;
+}
+.star-image{
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
