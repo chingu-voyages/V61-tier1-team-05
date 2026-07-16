@@ -55,5 +55,6 @@ python3 -m http.server
 ## Our Team
 
 - Terence (Scrum Master): [GitHub](https://github.com/lwhterence) / [LinkedIn](https://www.linkedin.com/in/terence-lui-7ab78a4/)
+- Val Lysenko (Technical guide): [Github](https://github.com/Valeriusdev) / [LinkedIn](https://www.linkedin.com/in/valeriylysenko)
 - Anas (Web developer): [GitHub](https://github.com/martiNik2)
 - Churchill (Web developer) : [GitHub](https://github.com/TheDevMode)
