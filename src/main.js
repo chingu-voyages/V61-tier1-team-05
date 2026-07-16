@@ -1,5 +1,5 @@
 import { evaluateWord } from "./colors-letter.js";
-import { daily_mode } from "./daily-mode.js";
+import { initialize_daily_mode } from "./daily-mode.js";
 import { dark_mode } from "./dark-mode.js";
 import { finish_message } from "./finish.js";
 import { buildGrid } from "./grid.js";
@@ -92,7 +92,7 @@ function checkWord(){
     }
 }
 
-async function loadWords(){
+export async function loadWords(){
     try{
         const index=Math.floor(word_list.length*Math.random());
         hidden_word=word_list[index];
@@ -103,6 +103,9 @@ async function loadWords(){
     }
 }
 
+export function setHiddenWord(newWordIndex){
+    hidden_word=word_list[newWordIndex];
+}
 
 function updateArrow() {
 
@@ -146,7 +149,7 @@ welcomeScreen();
 
 dark_mode();
 
-daily_mode();
+initialize_daily_mode();
 
 buildGrid();
 
