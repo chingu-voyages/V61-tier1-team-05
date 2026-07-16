@@ -1,8 +1,11 @@
 import { evaluateWord } from "./colors-letter.js";
+import { initialize_daily_mode } from "./daily-mode.js";
 import { dark_mode } from "./dark-mode.js";
 import { finish_message } from "./finish.js";
 import { buildGrid } from "./grid.js";
 import { generateEvents } from "./guide-popups.js";
+import { initializeKeyboard } from "./onscreen-keyboard.js";
+import { welcomeScreen } from "./welcome.js";
 import word_list from "./words.json" with {type:'json'};
 
 let currentRow = 0;
@@ -89,7 +92,7 @@ function checkWord(){
     }
 }
 
-async function loadWords(){
+export async function loadWords(){
     try{
         const index=Math.floor(word_list.length*Math.random());
         hidden_word=word_list[index];
@@ -100,6 +103,9 @@ async function loadWords(){
     }
 }
 
+export function setHiddenWord(newWordIndex){
+    hidden_word=word_list[newWordIndex];
+}
 
 function updateArrow() {
 
@@ -118,7 +124,7 @@ function updateArrow() {
 
     rowDiv.appendChild(arrowImg);
 }
-function errorMessage(message){
+export function errorMessage(message){
     const contentDiv=document.createElement("div");
     contentDiv.classList.add("error-message","overlay-content","hidden");
     contentDiv.innerText=message;
@@ -139,9 +145,15 @@ function errorMessage(message){
     },2000);
 }
 
+welcomeScreen();
+
 dark_mode();
 
+initialize_daily_mode();
+
 buildGrid();
+
+initializeKeyboard();
 
 loadWords();
 

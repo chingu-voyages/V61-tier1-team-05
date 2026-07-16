@@ -1,4 +1,4 @@
-import { hidden_word } from "./keyboard-input.js";
+import { hidden_word } from "./main.js";
 
 const url=new URL(window.location.href);
 url.searchParams.set('skipWelcome','true');

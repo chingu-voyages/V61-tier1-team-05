@@ -7,8 +7,9 @@ export function dark_mode() {
     toggleButton.textContent = "🌙";
     toggleButton.id = "dark-mode-button";
 
-    const mainHeader = document.body.querySelector("header");
-    mainHeader.appendChild(toggleButton);
+    const header = document.body.querySelector("header");
+
+    header.appendChild(toggleButton);
 
     const setTheme = (theme) => {
         document.documentElement.setAttribute('data-theme', theme);
