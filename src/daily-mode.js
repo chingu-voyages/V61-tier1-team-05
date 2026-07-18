@@ -17,7 +17,6 @@ export function initialize_daily_mode(){
             dailymodeButton.style.backgroundColor="green";
             errorMessage("Daily mode is on!");
             setHiddenWord(getDailyWordIndex());            
-            console.log(hidden_word);
         }
         else{
             dailymodeButton.style.backgroundColor="darkred";
